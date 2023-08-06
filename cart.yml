@@ -1,12 +1,14 @@
-- name: Catalogue Setup
+- name: Cart Setup
   hosts: all
   become: yes
   vars:
-    component: catalogue
-    schema: true
+    component: cart
   tasks:
-    - name: NodeJS Setup
+    - name: NodeJs Setup
       ansible.builtin.import_tasks: nodejs.yml
+
+
+
 
 
 
