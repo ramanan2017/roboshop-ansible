@@ -12,14 +12,14 @@
 
     - name: Install MySql Community Server
       ansible.builtin.yum:
-        - name: mysql-community-server
-          state: installed
+        name: mysql-community-server
+        state: installed
 
     - name: Start MySQL services
       ansible.builtin.systemd:
-        - name: mysqld
-          state: restarted
-          enabled: yes
+        name: mysqld
+        state: restarted
+        enabled: yes
 
     - name: Set Root Password
       ansible.builtin.shell: mysql_secure_installation --set-root-pass RoboShop@1
